@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Camera, Globe, Share2, Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { useData } from '../context/DataContext';
 
@@ -77,7 +78,7 @@ const Footer = () => {
         <div className="border-t border-stone-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
           <p>© 2026 Taste Of India. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-             <a href="/login" className="text-stone-700 hover:text-stone-500 transition-colors">Admin Login</a>
+             <Link to="/login" className="text-stone-700 hover:text-stone-500 transition-colors">Admin Login</Link>
           </div>
         </div>
       </div>
