@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Paneer Tikka",
+    "description": "Marinated paneer chunks grilled to perfection with bell peppers and onions.",
+    "price": 12.99,
+    "category": "Starters",
+    "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    "id": 2,
+    "name": "Chicken Tikka Masala",
+    "description": "Succulent roasted chicken pieces in a rich, creamy tomato gravy.",
+    "price": 16.50,
+    "category": "Main Course",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    "id": 3,
+    "name": "Gulab Jamun",
+    "description": "Soft, syrup-soaked milk solids dumplings, a classic Indian dessert.",
+    "price": 6.99,
+    "category": "Desserts",
+    "image": "https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    "id": 4,
+    "name": "Mango Lassi",
+    "description": "Refreshing yogurt-based drink with sweet mango pulp.",
+    "price": 4.50,
+    "category": "Beverages",
+    "image": "https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    "id": 5,
+    "name": "Butter Naan",
+    "description": "Soft leavened flatbread brushed with melted butter.",
+    "price": 3.99,
+    "category": "Main Course",
+    "image": "https://images.unsplash.com/photo-1601050633647-8f8f5f30d93e?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    "id": 6,
+    "name": "Lamb Rogan Josh",
+    "description": "Tender lamb cooked in a fragrant onion and tomato-based sauce.",
+    "price": 18.99,
+    "category": "Main Course",
+    "image": "https://images.unsplash.com/photo-1545240103-121f2910aa65?auto=format&fit=crop&q=80&w=800"
+  }
+]
