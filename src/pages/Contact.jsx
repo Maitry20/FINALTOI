@@ -35,10 +35,10 @@ const Contact = () => {
             className="flex flex-col justify-center"
           >
             <h1 className="text-5xl md:text-7xl font-display font-black mb-8 leading-tight">
-               Let's <span className="text-saffron italic">Connect</span> Over Curries
+               {t('contact.hero_title').split(' ').map((w, i) => i === 2 ? <span key={i} className="text-saffron italic">{w} </span> : w + ' ')}
             </h1>
             <p className="text-xl text-stone-500 mb-12 max-w-lg leading-relaxed">
-               Have questions about our menu or catering? We're here to help you experience the best of Indian cuisine.
+               {t('contact.hero_subtitle')}
             </p>
 
             <div className="space-y-8 mb-12">
@@ -91,7 +91,7 @@ const Contact = () => {
                 <div className="absolute -top-10 -right-10 w-40 h-40 bg-saffron/5 rounded-full blur-3xl group-hover:bg-saffron/10 transition-colors" />
                 <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-indiaGreen/5 rounded-full blur-3xl group-hover:bg-indiaGreen/10 transition-colors" />
 
-                <h2 className="text-3xl font-black mb-10 italic">Send us a Message</h2>
+                <h2 className="text-3xl font-black mb-10 italic">{t('contact.send_message')}</h2>
                 
                 <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
                    <div>
@@ -102,7 +102,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
                         className="w-full px-6 py-4 bg-stone-50 border-2 border-stone-100 rounded-2xl focus:border-saffron focus:bg-white focus:outline-none transition-all placeholder:text-stone-300 font-medium"
-                        placeholder="Your Name"
+                        placeholder={t('contact.name')}
                       />
                    </div>
                    <div>
@@ -124,7 +124,7 @@ const Contact = () => {
                         value={formData.message}
                         onChange={(e) => setFormData({...formData, message: e.target.value})}
                         className="w-full px-6 py-4 bg-stone-50 border-2 border-stone-100 rounded-2xl focus:border-saffron focus:bg-white focus:outline-none transition-all placeholder:text-stone-300 font-medium resize-none"
-                        placeholder="Tell us what's on your mind..."
+                        placeholder={t('contact.message')}
                       />
                    </div>
                    

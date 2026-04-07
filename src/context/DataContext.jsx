@@ -33,11 +33,21 @@ export const DataProvider = ({ children }) => {
   useEffect(() => {
     // Load menu
     const storedMenu = localStorage.getItem('toi-menu');
-    if (storedMenu) {
-      setMenu(JSON.parse(storedMenu));
-    } else {
+    try {
+      if (storedMenu && storedMenu !== 'undefined' && storedMenu !== 'null') {
+        const parsed = JSON.parse(storedMenu);
+        if (Array.isArray(parsed)) {
+          setMenu(parsed);
+        } else {
+          throw new Error('Invalid menu data');
+        }
+      } else {
+        setMenu(defaultMenuData);
+        localStorage.setItem('toi-menu', JSON.stringify(defaultMenuData));
+      }
+    } catch (e) {
+      console.error('Error loading menu:', e);
       setMenu(defaultMenuData);
-      localStorage.setItem('toi-menu', JSON.stringify(defaultMenuData));
     }
 
     // Load about
@@ -62,33 +72,51 @@ export const DataProvider = ({ children }) => {
   }, []);
 
   const updateMenu = (newMenu) => {
-    setMenu(newMenu);
-    localStorage.setItem('toi-menu', JSON.stringify(newMenu));
+    setMenu(prev => {
+      const next = typeof newMenu === 'function' ? newMenu(prev) : newMenu;
+      localStorage.setItem('toi-menu', JSON.stringify(next));
+      return next;
+    });
   };
 
   const updateAbout = (newContent) => {
-    setAboutContent(newContent);
-    localStorage.setItem('toi-about', newContent);
+    setAboutContent(prev => {
+      const next = typeof newContent === 'function' ? newContent(prev) : newContent;
+      localStorage.setItem('toi-about', next);
+      return next;
+    });
   };
 
   const updateContact = (newContact) => {
-    setContactInfo(newContact);
-    localStorage.setItem('toi-contact', JSON.stringify(newContact));
+    setContactInfo(prev => {
+      const next = typeof newContact === 'function' ? newContact(prev) : newContact;
+      localStorage.setItem('toi-contact', JSON.stringify(next));
+      return next;
+    });
   };
 
   const updateSocials = (newSocials) => {
-    setSocialLinks(newSocials);
-    localStorage.setItem('toi-socials', JSON.stringify(newSocials));
+    setSocialLinks(prev => {
+      const next = typeof newSocials === 'function' ? newSocials(prev) : newSocials;
+      localStorage.setItem('toi-socials', JSON.stringify(next));
+      return next;
+    });
   };
 
   const updateHomeSettings = (newSettings) => {
-    setHomeSettings(newSettings);
-    localStorage.setItem('toi-home', JSON.stringify(newSettings));
+    setHomeSettings(prev => {
+      const next = typeof newSettings === 'function' ? newSettings(prev) : newSettings;
+      localStorage.setItem('toi-home', JSON.stringify(next));
+      return next;
+    });
   };
 
   const updateReviews = (newReviews) => {
-    setReviews(newReviews);
-    localStorage.setItem('toi-reviews', JSON.stringify(newReviews));
+    setReviews(prev => {
+      const next = typeof newReviews === 'function' ? newReviews(prev) : newReviews;
+      localStorage.setItem('toi-reviews', JSON.stringify(next));
+      return next;
+    });
   };
 
   return (

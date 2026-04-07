@@ -2,9 +2,21 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ShoppingBasket, Plus } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { toast } from 'react-hot-toast';
 
 const DishCard = ({ dish, delay = 0 }) => {
   const { t } = useLanguage();
+
+  const handleAddToCart = () => {
+    toast.success(`${dish.name} ${t('menu.added_toast')}`, {
+      icon: '🍛',
+      style: {
+        borderRadius: '15px',
+        background: '#333',
+        color: '#fff',
+      },
+    });
+  };
 
   return (
     <motion.div
@@ -39,7 +51,10 @@ const DishCard = ({ dish, delay = 0 }) => {
           {dish.description}
         </p>
         
-        <button className="w-full flex items-center justify-center gap-2 py-3 bg-stone-50 hover:bg-saffron hover:text-white rounded-xl transition-all duration-300 font-bold group/btn">
+        <button 
+          onClick={handleAddToCart}
+          className="w-full flex items-center justify-center gap-2 py-3 bg-stone-50 hover:bg-saffron hover:text-white rounded-xl transition-all duration-300 font-bold group/btn"
+        >
           <Plus size={18} className="group-hover/btn:rotate-90 transition-transform"/>
           {t('menu.add_to_cart')}
         </button>
@@ -49,3 +64,4 @@ const DishCard = ({ dish, delay = 0 }) => {
 };
 
 export default DishCard;
+

@@ -11,7 +11,8 @@
       "title": "Flavor of Tradition, Perfected for You",
       "subtitle": "Discover the most authentic Indian cloud kitchen experience.",
       "cta_menu": "View Menu",
-      "cta_about": "Our Story"
+      "cta_about": "Our Story",
+      "happy_foodies": "happy foodies served daily"
     },
     "menu": {
       "title": "Our Menu",
@@ -20,16 +21,52 @@
       "main_course": "Main Course",
       "desserts": "Desserts",
       "beverages": "Beverages",
-      "add_to_cart": "Add to Order"
+      "add_to_cart": "Add to Order",
+      "explore_full": "Explore Full Menu",
+      "added_toast": "Added to cart!"
+    },
+    "reviews": {
+      "title": "Customer Voices",
+      "subtitle": "Hear from our community of food lovers who experience the magic of Taste Of India every day.",
+      "leave_review": "Leave a Review",
+      "add_title": "Add Your Experience",
+      "name_label": "Your Name",
+      "comment_label": "Your Testimonial",
+      "submit": "Share Review",
+      "success": "Thank you for your review!"
     },
     "about": {
       "title": "Taste of India",
       "subtitle": "Our Culinary Journey",
+      "hero_sub": "A celebration of Indian heritage, spices, and soulful cooking.",
+      "philosophy": "Our Philosophy of Food",
+      "passion_title": "Passion",
+      "passion_desc": "Every spice is hand-roasted for depth.",
+      "tradition_title": "Traditional",
+      "tradition_desc": "Slow-cooked methods like the past.",
+      "stat_cities": "Cities",
+      "stat_orders": "Orders",
+      "values_title": "Our Values",
+      "val_auth_title": "Authenticity",
+      "val_auth_desc": "No shortcuts. No substitutes. Only pure traditions.",
+      "val_comm_title": "Community",
+      "val_comm_desc": "Supporting local farmers and sustainable sourcing.",
+      "val_inn_title": "Innovation",
+      "val_inn_desc": "Blending heritage flavors with modern techniques.",
       "default_content": "Founded in 2021, Taste Of India was born from a passion for authentic Indian spices and traditional cooking methods. Our mission is to bring the rich, diverse flavors of India directly to your doorstep. Every dish is crafted with care, using heritage recipes and the freshest ingredients."
     },
     "contact": {
       "title": "Contact Us",
       "get_in_touch": "Get In Touch",
+      "hero_title": "Let's Connect Over Curries",
+      "hero_subtitle": "Have questions about our menu or catering? We're here to help you experience the best of Indian cuisine.",
+      "visit_us": "Visit Us",
+      "call_us": "Call Us",
+      "email_us": "Email Us",
+      "whatsapp": "WhatsApp",
+      "hours": "Monday - Sunday: 11:00 AM - 11:00 PM",
+      "send_message": "Send us a Message",
+      "map_placeholder": "Interactive Map Integration",
       "phone": "Phone",
       "email": "Email",
       "address": "Address",
@@ -37,6 +74,15 @@
       "message": "Message",
       "send": "Send Message",
       "success": "Message sent successfully!"
+    },
+    "footer": {
+      "about_text": "Authentic Indian flavors delivered to your doorstep. Experience the tradition in every bite.",
+      "newsletter": "Newsletter",
+      "subscribe": "Subscribe for special offers.",
+      "email_placeholder": "Your email",
+      "join_btn": "Join",
+      "rights": "All rights reserved.",
+      "admin_login": "Admin Login"
     }
   },
   "fr": {
@@ -51,7 +97,8 @@
       "title": "Saveur de Tradition, Perfectionnée pour Vous",
       "subtitle": "Découvrez l'expérience de cuisine indienne la plus authentique.",
       "cta_menu": "Voir le Menu",
-      "cta_about": "Notre Histoire"
+      "cta_about": "Notre Histoire",
+      "happy_foodies": "foodies heureux servis chaque jour"
     },
     "menu": {
       "title": "Notre Menu",
@@ -60,16 +107,52 @@
       "main_course": "Plat Principal",
       "desserts": "Desserts",
       "beverages": "Boissons",
-      "add_to_cart": "Commander"
+      "add_to_cart": "Commander",
+      "explore_full": "Explorer tout le menu",
+      "added_toast": "Ajouté au panier !"
+    },
+    "reviews": {
+      "title": "Voix des clients",
+      "subtitle": "Écoutez notre communauté d'amoureux de la cuisine qui vivent la magie de Taste Of India chaque jour.",
+      "leave_review": "Laisser un avis",
+      "add_title": "Ajoutez votre expérience",
+      "name_label": "Votre nom",
+      "comment_label": "Votre témoignage",
+      "submit": "Partager l'avis",
+      "success": "Merci pour votre avis !"
     },
     "about": {
       "title": "Taste of India",
       "subtitle": "Notre Voyage Culinaire",
-      "default_content": "Fondée en 2021, Taste Of India est née d'une passion pour les épices indiennes authentiques et les méthodes de cuisson traditionnelles. Notre mission est d'apporter les saveurs riches et diverses de l'Inde directement à votre porte. Chaque plat est préparé avec soin, en utilisant des recettes patrimoniales et les ingrédients les plus frais."
+      "hero_sub": "Une célébration de l'héritage indien, des épices et de la cuisine de l'âme.",
+      "philosophy": "Notre Philosophie de la Cuisine",
+      "passion_title": "Passion",
+      "passion_desc": "Chaque épice est torréfiée à la main pour plus de profondeur.",
+      "tradition_title": "Traditionnel",
+      "tradition_desc": "Méthodes de cuisson lente comme autrefois.",
+      "stat_cities": "Villes",
+      "stat_orders": "Commandes",
+      "values_title": "Nos Valeurs",
+      "val_auth_title": "Authenticité",
+      "val_auth_desc": "Pas de raccourcis. Pas de substituts. Uniquement de pures traditions.",
+      "val_comm_title": "Communauté",
+      "val_comm_desc": "Soutenir les agriculteurs locaux et l'approvisionnement durable.",
+      "val_inn_title": "Innovation",
+      "val_inn_desc": "Mélange de saveurs patrimoniales avec des techniques modernes.",
+      "default_content": "Fondée in 2021, Taste Of India est née d'une passion pour les épices indiennes authentiques et les méthodes de cuisson traditionnelles. Notre mission est d'apporter les saveurs riches et diverses de l'Inde directement à votre porte. Chaque plat est préparé avec soin, en utilisant des recettes patrimoniales et les ingrédients les plus frais."
     },
     "contact": {
       "title": "Contactez-nous",
       "get_in_touch": "Entrer en contact",
+      "hero_title": "Connectons-nous autour d'un curry",
+      "hero_subtitle": "Vous avez des questions sur notre menu ou notre service traiteur ? Nous sommes là pour vous aider à découvrir le meilleur de la cuisine indienne.",
+      "visit_us": "Rendez-nous visite",
+      "call_us": "Appelez-nous",
+      "email_us": "Envoyez-nous un e-mail",
+      "whatsapp": "WhatsApp",
+      "hours": "Lundi - Dimanche : 11h00 - 23h00",
+      "send_message": "Envoyez-nous un message",
+      "map_placeholder": "Intégration d'une carte interactive",
       "phone": "Téléphone",
       "email": "E-mail",
       "address": "Adresse",
@@ -77,6 +160,15 @@
       "message": "Message",
       "send": "Envoyer le message",
       "success": "Message envoyé avec succès!"
+    },
+    "footer": {
+      "about_text": "Saveurs indiennes authentiques livrées à votre porte. Découvrez la tradition dans chaque bouchée.",
+      "newsletter": "Newsletter",
+      "subscribe": "Inscrivez-vous pour des offres spéciales.",
+      "email_placeholder": "Votre email",
+      "join_btn": "Rejoindre",
+      "rights": "Tous droits réservés.",
+      "admin_login": "Connexion Admin"
     }
   }
 }

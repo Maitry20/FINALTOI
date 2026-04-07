@@ -70,8 +70,7 @@ const AdminDashboard = () => {
     // Handlers: Menu
     const handleAddDish = (e) => {
         e.preventDefault();
-        const updatedMenu = [...menu, { ...newDish, id: Date.now(), price: parseFloat(newDish.price) }];
-        setMenu(updatedMenu);
+        setMenu(prev => [...prev, { ...newDish, id: Date.now(), price: parseFloat(newDish.price) }]);
         setIsAdding(false);
         setNewDish({ name: '', description: '', price: '', category: 'Main Course', image: '' });
         toast.success('Dish added!');
@@ -79,8 +78,7 @@ const AdminDashboard = () => {
 
     const handleUpdateDish = (e) => {
         e.preventDefault();
-        const updatedMenu = menu.map(d => d.id === editingDish.id ? { ...editingDish, price: parseFloat(editingDish.price) } : d);
-        setMenu(updatedMenu);
+        setMenu(prev => prev.map(d => d.id === editingDish.id ? { ...editingDish, price: parseFloat(editingDish.price) } : d));
         setEditingDish(null);
         toast.success('Dish updated!');
     };
@@ -91,10 +89,9 @@ const AdminDashboard = () => {
             title: 'Delete Dish?',
             message: `Are you sure you want to remove "${dish.name}" from your menu? This action cannot be undone.`,
             onConfirm: () => {
-                const updatedMenu = menu.filter(d => String(d.id) !== String(dish.id));
-                setMenu(updatedMenu);
+                setMenu(prev => prev.filter(d => String(d.id) !== String(dish.id)));
                 toast.success('Dish deleted');
-                setConfirmModal({ ...confirmModal, isOpen: false });
+                setConfirmModal(prev => ({ ...prev, isOpen: false }));
             }
         });
     };
@@ -107,7 +104,7 @@ const AdminDashboard = () => {
     // Handlers: Reviews
     const handleAddReview = (e) => {
         e.preventDefault();
-        setReviews([...reviews, { ...newReview, id: Date.now() }]);
+        setReviews(prev => [...prev, { ...newReview, id: Date.now() }]);
         setIsAddingReview(false);
         setNewReview({ name: '', rating: 5, comment: '', date: new Date().toLocaleDateString() });
         toast.success('Review added!');
@@ -119,9 +116,9 @@ const AdminDashboard = () => {
             title: 'Remove Review?',
             message: `Delete the testimonial from "${rev.name}"?`,
             onConfirm: () => {
-                setReviews(reviews.filter(r => r.id !== rev.id));
+                setReviews(prev => prev.filter(r => r.id !== rev.id));
                 toast.success('Review removed');
-                setConfirmModal({ ...confirmModal, isOpen: false });
+                setConfirmModal(prev => ({ ...prev, isOpen: false }));
             }
         });
     };

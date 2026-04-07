@@ -31,7 +31,7 @@ const About = () => {
               {t('about.subtitle')}
             </h1>
             <p className="text-xl text-stone-400 max-w-2xl mx-auto font-medium">
-               A celebration of Indian heritage, spices, and soulful cooking.
+               {t('about.hero_sub')}
             </p>
           </motion.div>
         </div>
@@ -47,7 +47,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
              <h2 className="text-4xl font-display font-black mb-8 leading-tight">
-                Our <span className="text-saffron italic underline decoration-indiaGreen decoration-4 underline-offset-8">Philosophy</span> of Food
+                {t('about.philosophy').split(' ').map((w, i) => i === 1 ? <span key={i} className="text-saffron italic underline decoration-indiaGreen decoration-4 underline-offset-8">{w} </span> : w + ' ')}
              </h2>
              <div className="text-lg text-stone-600 leading-relaxed space-y-6">
                 {finalContent.split('\n').map((para, i) => (
@@ -58,13 +58,13 @@ const About = () => {
              <div className="grid grid-cols-2 gap-8 mt-12">
                 <div className="p-6 bg-stone-50 rounded-2xl border border-stone-100 hover:border-saffron hover:bg-white transition-all group">
                    <Heart className="text-saffron mb-4 transition-transform group-hover:scale-110" />
-                   <h4 className="font-bold mb-2">Passion</h4>
-                   <p className="text-stone-500 text-sm">Every spice is hand-roasted for depth.</p>
+                   <h4 className="font-bold mb-2">{t('about.passion_title')}</h4>
+                   <p className="text-stone-500 text-sm">{t('about.passion_desc')}</p>
                 </div>
                 <div className="p-6 bg-stone-50 rounded-2xl border border-stone-100 hover:border-indiaGreen hover:bg-white transition-all group">
                    <Coffee className="text-indiaGreen mb-4 transition-transform group-hover:scale-110" />
-                   <h4 className="font-bold mb-2">Traditional</h4>
-                   <p className="text-stone-500 text-sm">Slow-cooked methods like the past.</p>
+                   <h4 className="font-bold mb-2">{t('about.tradition_title')}</h4>
+                   <p className="text-stone-500 text-sm">{t('about.tradition_desc')}</p>
                 </div>
              </div>
           </motion.div>
@@ -89,12 +89,12 @@ const About = () => {
                <div className="flex items-center gap-10">
                   <div className="text-center">
                     <p className="text-4xl font-black text-saffron mb-1">5+</p>
-                    <p className="text-xs font-bold text-stone-400 uppercase tracking-widest">Cities</p>
+                    <p className="text-xs font-bold text-stone-400 uppercase tracking-widest">{t('about.stat_cities')}</p>
                   </div>
                   <div className="w-[1px] h-12 bg-stone-100" />
                   <div className="text-center">
                     <p className="text-4xl font-black text-indiaGreen mb-1">15k</p>
-                    <p className="text-xs font-bold text-stone-400 uppercase tracking-widest">Orders</p>
+                    <p className="text-xs font-bold text-stone-400 uppercase tracking-widest">{t('about.stat_orders')}</p>
                   </div>
                </div>
             </div>
@@ -105,12 +105,12 @@ const About = () => {
       {/* Values Section */}
       <section className="py-24 bg-stone-50">
         <div className="container mx-auto px-6 text-center">
-           <h2 className="text-4xl mb-16 italic font-black">Our Values</h2>
+           <h2 className="text-4xl mb-16 italic font-black">{t('about.values_title')}</h2>
            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {[
-                { icon: <History className="text-saffron mb-6" />, title: 'Authenticity', desc: 'No shortcuts. No substitutes. Only pure traditions.' },
-                { icon: <Users className="text-indiaGreen mb-6" />, title: 'Community', desc: 'Supporting local farmers and sustainable sourcing.' },
-                { icon: <Star className="text-accent mb-6" />, title: 'Innovation', desc: 'Blending heritage flavors with modern techniques.' }
+                { icon: <History className="text-saffron mb-6" />, title: t('about.val_auth_title'), desc: t('about.val_auth_desc') },
+                { icon: <Users className="text-indiaGreen mb-6" />, title: t('about.val_comm_title'), desc: t('about.val_comm_desc') },
+                { icon: <Star className="text-accent mb-6" />, title: t('about.val_inn_title'), desc: t('about.val_inn_desc') }
               ].map((val, i) => (
                 <div key={i} className="p-10 bg-white rounded-3xl shadow-soft border border-stone-100 hover:shadow-xl transition-all">
                    <div className="w-16 h-16 bg-stone-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -128,3 +128,4 @@ const About = () => {
 };
 
 export default About;
+
